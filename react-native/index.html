@@ -1,210 +1,1797 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Shower Presentation Engine</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+<html lang="ru">
+  <head>
+    <title>WTF react-native</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="prism.css" />
+    <link rel="stylesheet" href="t.css" />
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
     <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
     </style>
-</head>
-<body class="shower list">
-
+  </head>
+  <body class="shower list">
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+      <h1>react-native</h1>
+      <p>
+        Немного о самой технологии, как эффективно начать изучение, подводные
+        камни.
+      </p>
     </header>
 
-    <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
-            }
+    <section class="slide">
+      <h2><a href="http://10.0.0.154:3000/">http://10.0.0.154:3000/</a></h2>
 
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
-            }
-
-            #cover p a {
-                color: white;
-            }
-        </style>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        width="100"
+        height="100"
+        viewBox="0 0 2000 2000"
+        x="0"
+        y="0"
+        shape-rendering="crispEdges"
+        style="transform: scale(3);transform-origin: 0 0;"
+      >
+        <defs></defs>
+        <rect x="0" y="0" width="2000" height="2000" fill="#ffffff"></rect>
+        <rect x="840" y="200" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="200" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="200" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="200" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="200" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="264" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="264" width="64" height="64" fill="#000000"></rect>
+        <rect x="1032" y="264" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="264" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="264" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="328" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="328" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="392" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="392" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="392" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="392" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="392" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="392" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="392" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="456" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="456" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="520" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="520" width="64" height="64" fill="#000000"></rect>
+        <rect x="904" y="520" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="520" width="64" height="64" fill="#000000"></rect>
+        <rect x="1032" y="520" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="520" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="520" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="584" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="584" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="584" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="584" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="584" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="648" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="648" width="64" height="64" fill="#000000"></rect>
+        <rect x="904" y="648" width="64" height="64" fill="#000000"></rect>
+        <rect x="1032" y="648" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="648" width="64" height="64" fill="#000000"></rect>
+        <rect x="200" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="264" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="328" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="392" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="456" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="584" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="648" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="904" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="1032" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="1288" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="1416" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="1544" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="1672" y="712" width="64" height="64" fill="#000000"></rect>
+        <rect x="264" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="328" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="392" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="648" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="1288" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="1352" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="776" width="64" height="64" fill="#000000"></rect>
+        <rect x="200" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="264" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="328" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="456" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="520" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="584" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="1032" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="1352" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="1416" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="1608" y="840" width="64" height="64" fill="#000000"></rect>
+        <rect x="200" y="904" width="64" height="64" fill="#000000"></rect>
+        <rect x="264" y="904" width="64" height="64" fill="#000000"></rect>
+        <rect x="392" y="904" width="64" height="64" fill="#000000"></rect>
+        <rect x="456" y="904" width="64" height="64" fill="#000000"></rect>
+        <rect x="648" y="904" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="904" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="904" width="64" height="64" fill="#000000"></rect>
+        <rect x="1288" y="904" width="64" height="64" fill="#000000"></rect>
+        <rect x="200" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="392" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="584" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="648" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="1032" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="1352" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="1416" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="1544" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="1672" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="968" width="64" height="64" fill="#000000"></rect>
+        <rect x="200" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="264" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="392" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="520" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="1352" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="1416" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="1672" y="1032" width="64" height="64" fill="#000000"></rect>
+        <rect x="200" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="456" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="584" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="648" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="904" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="1032" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="1352" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="1608" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="1672" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="1096" width="64" height="64" fill="#000000"></rect>
+        <rect x="200" y="1160" width="64" height="64" fill="#000000"></rect>
+        <rect x="520" y="1160" width="64" height="64" fill="#000000"></rect>
+        <rect x="648" y="1160" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1160" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="1160" width="64" height="64" fill="#000000"></rect>
+        <rect x="904" y="1160" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="1160" width="64" height="64" fill="#000000"></rect>
+        <rect x="1672" y="1160" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="1160" width="64" height="64" fill="#000000"></rect>
+        <rect x="200" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="328" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="392" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="456" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="584" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="648" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="904" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="1288" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="1352" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="1416" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="1544" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="1224" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1288" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="1288" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="1288" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="1288" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="1288" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1288" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="1288" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="1032" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="1352" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="1608" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="1672" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="1352" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="1416" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="1416" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="1416" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1416" width="64" height="64" fill="#000000"></rect>
+        <rect x="1544" y="1416" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1480" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="1480" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="1480" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="1480" width="64" height="64" fill="#000000"></rect>
+        <rect x="1288" y="1480" width="64" height="64" fill="#000000"></rect>
+        <rect x="1352" y="1480" width="64" height="64" fill="#000000"></rect>
+        <rect x="1416" y="1480" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1480" width="64" height="64" fill="#000000"></rect>
+        <rect x="1544" y="1480" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="904" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="1224" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="1288" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="1416" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="1544" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="1672" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="1544" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="904" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="1032" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="1416" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="1608" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="1608" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="904" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="1096" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="1352" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="1480" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="1544" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="1608" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="1672" y="1672" width="64" height="64" fill="#000000"></rect>
+        <rect x="712" y="1736" width="64" height="64" fill="#000000"></rect>
+        <rect x="776" y="1736" width="64" height="64" fill="#000000"></rect>
+        <rect x="840" y="1736" width="64" height="64" fill="#000000"></rect>
+        <rect x="968" y="1736" width="64" height="64" fill="#000000"></rect>
+        <rect x="1160" y="1736" width="64" height="64" fill="#000000"></rect>
+        <rect x="1288" y="1736" width="64" height="64" fill="#000000"></rect>
+        <rect x="1544" y="1736" width="64" height="64" fill="#000000"></rect>
+        <rect x="1608" y="1736" width="64" height="64" fill="#000000"></rect>
+        <rect x="1672" y="1736" width="64" height="64" fill="#000000"></rect>
+        <rect x="1736" y="1736" width="64" height="64" fill="#000000"></rect>
+        <svg
+          version="1.1"
+          id="Ebene_1"
+          x="200"
+          y="200"
+          width="448"
+          height="448"
+          viewBox="0 0 699.988 699.986"
+          enable-background="new 0 0 699.988 699.986"
+          xml:space="preserve"
+          shape-rendering="auto"
+        >
+          <path
+            fill="#000000"
+            d="M600.99,0h-100h-99.997h-0.001h-99.997h-99.998h-99.998H1v99.998v99.998v99.998v99.999v99.997v99.998v99.998  h99.999h99.998h99.998h99.997h0.001h99.997h100h99.998v-99.998V499.99v-99.997v-99.999v-99.998V99.998V0H600.99z M600.99,199.996  v99.998v99.999v99.997v99.998h-100h-99.997h-0.001h-99.997h-99.998h-99.998V499.99v-99.997v-99.999v-99.998V99.998h99.998h99.998  h99.997h0.001h99.997h100V199.996z"
+          ></path>
+        </svg>
+        <svg
+          version="1.0"
+          id="Ebene_1"
+          x="200"
+          y="200"
+          width="448"
+          height="448"
+          viewBox="0 0 699.988 699.988"
+          enable-background="new 0 0 699.988 699.988"
+          xml:space="preserve"
+          shape-rendering="auto"
+        >
+          <polygon
+            fill="#000000"
+            points="399.994,199.997 399.992,199.997 299.996,199.997 199.998,199.997 199.998,299.994 199.998,399.994   199.998,499.991 299.996,499.991 399.992,499.991 399.994,499.991 499.99,499.991 499.99,399.994 499.99,299.994 499.99,199.997 "
+          ></polygon>
+        </svg>
+        <svg
+          version="1.1"
+          id="Ebene_1"
+          x="1352"
+          y="200"
+          width="448"
+          height="448"
+          viewBox="0 0 699.988 699.986"
+          enable-background="new 0 0 699.988 699.986"
+          xml:space="preserve"
+          shape-rendering="auto"
+        >
+          <path
+            fill="#000000"
+            d="M600.99,0h-100h-99.997h-0.001h-99.997h-99.998h-99.998H1v99.998v99.998v99.998v99.999v99.997v99.998v99.998  h99.999h99.998h99.998h99.997h0.001h99.997h100h99.998v-99.998V499.99v-99.997v-99.999v-99.998V99.998V0H600.99z M600.99,199.996  v99.998v99.999v99.997v99.998h-100h-99.997h-0.001h-99.997h-99.998h-99.998V499.99v-99.997v-99.999v-99.998V99.998h99.998h99.998  h99.997h0.001h99.997h100V199.996z"
+          ></path>
+        </svg>
+        <svg
+          version="1.0"
+          id="Ebene_1"
+          x="1352"
+          y="200"
+          width="448"
+          height="448"
+          viewBox="0 0 699.988 699.988"
+          enable-background="new 0 0 699.988 699.988"
+          xml:space="preserve"
+          shape-rendering="auto"
+        >
+          <polygon
+            fill="#000000"
+            points="399.994,199.997 399.992,199.997 299.996,199.997 199.998,199.997 199.998,299.994 199.998,399.994   199.998,499.991 299.996,499.991 399.992,499.991 399.994,499.991 499.99,499.991 499.99,399.994 499.99,299.994 499.99,199.997 "
+          ></polygon>
+        </svg>
+        <svg
+          version="1.1"
+          id="Ebene_1"
+          x="200"
+          y="1352"
+          width="448"
+          height="448"
+          viewBox="0 0 699.988 699.986"
+          enable-background="new 0 0 699.988 699.986"
+          xml:space="preserve"
+          shape-rendering="auto"
+        >
+          <path
+            fill="#000000"
+            d="M600.99,0h-100h-99.997h-0.001h-99.997h-99.998h-99.998H1v99.998v99.998v99.998v99.999v99.997v99.998v99.998  h99.999h99.998h99.998h99.997h0.001h99.997h100h99.998v-99.998V499.99v-99.997v-99.999v-99.998V99.998V0H600.99z M600.99,199.996  v99.998v99.999v99.997v99.998h-100h-99.997h-0.001h-99.997h-99.998h-99.998V499.99v-99.997v-99.999v-99.998V99.998h99.998h99.998  h99.997h0.001h99.997h100V199.996z"
+          ></path>
+        </svg>
+        <svg
+          version="1.0"
+          id="Ebene_1"
+          x="200"
+          y="1352"
+          width="448"
+          height="448"
+          viewBox="0 0 699.988 699.988"
+          enable-background="new 0 0 699.988 699.988"
+          xml:space="preserve"
+          shape-rendering="auto"
+        >
+          <polygon
+            fill="#000000"
+            points="399.994,199.997 399.992,199.997 299.996,199.997 199.998,199.997 199.998,299.994 199.998,399.994   199.998,499.991 299.996,499.991 399.992,499.991 399.994,499.991 499.99,499.991 499.99,399.994 499.99,299.994 499.99,199.997 "
+          ></polygon>
+        </svg>
+      </svg>
     </section>
 
-    <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+    <section class="slide" id="wast-will-be-next">
+      <h2>О чем доклад</h2>
+      <ol>
+        <li>Что такое React Native</li>
+        <li>Как работает React Native</li>
+        <li>С чего начать</li>
+        <li>Проблемы React Native</li>
+        <li>Пару слов о будущем</li>
+      </ol>
     </section>
 
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+    <section class="slide" id="wftps">
+      <h2>WTF react-native?</h2>
+      <img
+        src="https://i2.wp.com/commadot.com/wp-content/uploads/2009/02/wtf.png?resize=550%2C433"
+        alt=""
+        class="next cover"
+      />
+      <style>
+        #wftps .cover {
+          top: 60%;
+        }
+      </style>
     </section>
 
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+    <section class="slide" id="meaning-facebook">
+      <h2>Как facebook позиционирует эту технологию</h2>
+      <figure>
+        <blockquote>
+          <p>
+            Build native mobile apps using JavaScript and React
+          </p>
+          <p>A React Native app is a real mobile app</p>
+        </blockquote>
+      </figure>
+      <img
+        class="cover"
+        src="pictures/cover.jpg"
+        alt="человеческий глаз с отражением логотипа facebook"
+      />
+      <style>
+        #meaning-facebook p,
+        #meaning-facebook h2 {
+          color: #fff;
+        }
+        #meaning-facebook figure {
+          background: #00000090;
+          padding: 1em;
+          color: #aaa;
+        }
+        #meaning-facebook figcaption {
+          color: #fff;
+        }
+        #meaning-facebook img {
+          opacity: 1;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="cross-platform">
+      <h2>Кроссплатформенность</h2>
+      <ul>
+        <li>
+          <img
+            src="https://docs.microsoft.com/media/logos/logo_xamarin.svg"
+            style="width: 36px; position: relative; top: 13px"
+          />
+          <a href="https://docs.microsoft.com/en-us/xamarin/">
+            Xamarin
+          </a>
+          (Использует Mono, нужны знания С#)
+        </li>
+        <li>
+          <a href="https://flutter.dev/">
+            <img
+              src="https://flutter.dev/assets/flutter-lockup-4cb0ee072ab312e59784d9fbf4fb7ad42688a7fdaea1270ccf6bbf4f34b7e03f.svg"
+              alt=""
+            />
+          </a>
+          (уже в релиз версия, нужны знания Dart)
+        </li>
+        <li>
+          <a href="https://www.nativescript.org/"
+            ><img
+              src="https://www.nativescript.org/images/default-source/logos/nativescript-logo.png?sfvrsn=2"
+              alt=""
+              style="filter: drop-shadow(0 0 3px #000000)"
+          /></a>
+          (работает в связке с Angular & Vue)
+        </li>
+        <li>
+          <a href="https://facebook.github.io/react-native/">
+            <img
+              src="https://facebook.github.io/react-native/img/header_logo.png"
+              alt=""
+              style="filter: drop-shadow(0 0 3px #000000)"
+            />
+            React Native
+          </a>
+          (стремительно развивается, JavaScript)
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="showcase">
+      <a href="https://facebook.github.io/react-native/showcase">
+        <img src="pictures/showcase.png" alt="" class="cover" />
+      </a>
+    </section>
+
+    <section class="slide" id="positive">
+      <h2>плюсы +</h2>
+      <ul>
+        <li>
+          Повторное использование кода между платформами iOS/Android/Web
+        </li>
+        <li>Нет нужды в командах нативных разработчиков</li>
+        <li>Кросплатформенность и скорость разработки</li>
+        <li>Низкий порог вхождения</li>
+        <li>Реальные нативные приложения (никаких web-view)</li>
+        <li>Уровень развития комьюнити</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="useful-vs-useless">
+      <h2>Где не применим react native</h2>
+      <ul>
+        <li>Игры</li>
+        <li>Сложные анимации</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="simple-app">
+      <h2>Простое приложение</h2>
+
+      <div class="flex wrap">
+        <div class="code">
+          <script type="text/plain" class="language-jsx">
+            import React from "react";
+            import { StyleSheet, View, Image, Text } from "react-native";
+
+            const styles = StyleSheet.create({
+              root: {
+                backgroundColor: "#fff",
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center"
+              },
+              eventPlaceText: {/**/},
+              yearText: {/**/},
+              image: {/**/}
+            });
+
+            const App = () => {
+              return (
+                <View style={styles.root}>
+                  <Image style={styles.image} source={require("./0.png")} />
+                  <Text style={styles.eventPlaceText}>ООО «Апсилон ай-ти»</Text>
+                  <Text style={styles.yearText}>2019</Text>
+                </View>
+              );
+            };
+
+            export default App;
+          </script>
         </div>
+        <div class="img">
+          <img src="pictures/simple-app.png" class="max-w-sm" />
+        </div>
+      </div>
+      <style>
+        #simple-app h2 {
+          margin-top: -7%;
+        }
+        #simple-app .code {
+          flex: 0 0 60%;
+          font-size: 12px;
+          margin-left: -8%;
+        }
+        #simple-app .img {
+          flex: 0 0 40%;
+          margin-top: -13%;
+        }
+      </style>
     </section>
 
-    <section class="slide">
-        <h2>All kind of lists</h2>
+    <section class="slide" id="history">
+      <h2>Не много истории</h2>
+      <p>
+        Первый публичный релиз* 4 года назад
+        <code>react-native@0.0.5</code>
+      </p>
+      <p>
+        На данный момент приблизились к версии
+        <a href="https://www.npmjs.org/package/react-native" rel="nofollow">
+          <img
+            src="https://badge.fury.io/js/react-native.svg"
+            alt="Current npm package version."
+          />
+        </a>
+      </p>
+      <p>Когда релиз?</p>
+
+      <img
+        class="next"
+        src="pictures/react-release.png"
+        alt="шутка про версионирование в реакте "
+      />
+      <style>
+        #history img {
+          max-width: 100%;
+          max-height: 150px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="simple-workflow">
+      <div class="grid">
+        <div class="wrap">
+          <div class="row">
+            <div class="box box-es">es2015+</div>
+            <div class="icon">➡️</div>
+            <div class="metro">
+              <a href="https://facebook.github.io/metro/">Metro</a> Bundler
+              <br />(http port: 8081)
+            </div>
+            <div class="icon">➡️</div>
+            <div class="box box-js">js</div>
+            <div class="icon">➡️️</div>
+          </div>
+          <div class="row2">
+            <div class="metro chrome">
+              Chrome
+              <div class="metro">WebSockets</div>
+            </div>
+            <div class="icon">↔️️</div>
+          </div>
+        </div>
+
+        <img src="pictures/phone.png" alt="" class="phone" />
+      </div>
+
+      <style>
+        #simple-workflow {
+          padding-top: 5%;
+        }
+        #simple-workflow .row {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+        #simple-workflow .row2 {
+          margin-top: 3em;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+        #simple-workflow .row2 > .metro {
+          margin-right: 110px;
+          padding-bottom: 20px;
+          text-align: center;
+        }
+        #simple-workflow .row2 > .metro > .metro {
+          display: block;
+        }
+        #simple-workflow .wrap {
+          display: flex;
+          flex-direction: column;
+        }
+
+        #simple-workflow .phone {
+          max-width: 20vw;
+        }
+        #simple-workflow .grid {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #simple-workflow .metro {
+          font-size: 24px;
+          line-height: 1.3;
+          display: inline-block;
+          border: 1px solid;
+          padding: 1em;
+        }
+
+        #simple-workflow .icon {
+          color: #000;
+          font-size: 1.8em;
+        }
+
+        #simple-workflow .box {
+          display: inline-block;
+          border-radius: 99px;
+          padding: 0 1em;
+          color: #000;
+          background: gold;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="debug">
+      <div class="panel">
+        <h2>Отладка</h2>
+        <ul>
+          <li>
+            Guide:
+            <a href="https://facebook.github.io/react-native/docs/debugging"
+              >Debugging</a
+            >
+          </li>
+          <li>
+            Отдельное приложение:
+            <br />
+            <a href="https://github.com/jhen0409/react-native-debugger"
+              >rn-debugger</a
+            >
+          </li>
+        </ul>
+      </div>
+      <img
+        src="https://facebook.github.io/react-native/docs/assets/ReactDevToolsInspector.gif"
+        class="cover"
+        alt=""
+      />
+      <style>
+          #debug li::before,
+        #debug a, #debug li, #debug h2{color: #fff;}
+        #debug .panel {
+          float: left;
+          color: #fff; !important;
+          background: rgba(0, 0, 0, 0.7);
+          -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
+          box-sizing: border-box;
+          padding: 20px;
+          padding-left: 40px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="platform">
+      <h2>Специфика платформ</h2>
+      <ul>
+        <li>
+          *.ios.js
+        </li>
+        <li>*.android.js</li>
+        <li>
+          <code>
+            Platform.select({ ios: 'iOS', android: 'Android' });
+          </code>
+        </li>
+        <li>
+          <code>
+            Platform.OS === 'android'
+          </code>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="two-types-of-modules">
+      <h2>Сторонние библиотеки</h2>
+      <br />
+      <p class="text-center text-2xl">Делятся на два типа</p>
+      <ol>
+        <li>Нативные модули</li>
+        <li>JS-only модули</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="engine">
+      <h3>JavaScript Engine</h3>
+
+      <p>По умолчанию используется <b>JavaScriptCore</b></p>
+      <p>Но для Android платформы:</p>
+      <ul>
+        <li>
+          <a href="https://hermesengine.dev/">
+            <img
+              src="https://hermesengine.dev/img/logo.svg"
+              style="max-width: 30px"
+              alt=""
+            />
+            Hermes
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Kudo/react-native-v8#readme">
+            <img
+              src="http://findnerd.s3.amazonaws.com/imagedata/7794/7794.png"
+              alt=""
+              style="max-width: 30px"
+            />
+            react-native-v8
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="hermes-performance">
+      <video
+        autoplay
+        loop
+        preload
+        src="pictures/perf.mp4"
+        class="cover"
+      ></video>
+    </section>
+
+    <section class="slide" id="Hermes-engine">
+      <h2>Hermes engine</h2>
+
+      <img
+        src="https://code.fb.com/wp-content/uploads/2019/07/HermesOSSChainReact_blog_FIN_1-1.gif"
+        alt=""
+      />
+    </section>
+
+    <section class="slide" id="Hermes-benefits">
+      <h2>Выгода Hermes</h2>
+      <img
+        class="max-w-full"
+        src="https://code.fb.com/wp-content/uploads/2019/07/hermesstats-1.jpg"
+        alt=""
+      />
+    </section>
+
+    <section class="slide" id="how-start">
+      <h2>C чего начать</h2>
+      <ol>
+        <li>
+          Официальная
+          <a href="https://facebook.github.io/react-native/docs/getting-started"
+            >документация</a
+          >
+          (api, guides*)
+        </li>
+        <li>
+          <a href="http://www.awesome-react-native.com/">
+            <img
+              src="http://www.awesome-react-native.com/arn.svg"
+              alt="awesome-react-native"
+            />
+            (Tutorials\Videos)
+          </a>
+        </li>
+        <li>
+          Курсы по React Native платные и не
+          <a href="https://coursehunters.net/mobile-development/react-native">
+            очень</a
+          >
+          🧟
+        </li>
+        <li>
+          Различные доклады на youtube.com
+        </li>
+      </ol>
+      <style>
+        #how-start img {
+          max-height: 50px;
+          margin-bottom: -9px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="env">
+      <h2>Среды разработки</h2>
+      <ul>
+        <li>XCode</li>
+        <li>Android Studio</li>
+      </ul>
+      <div class="next">
+        <ul>
+          <li>VS code</li>
+          <li>WebStorm</li>
+          <li>...</li>
+        </ul>
+        <p>Пока у вас нету потребности изменить нативный код (Си, Java)</p>
+      </div>
+    </section>
+
+    <section class="slide" id="expo">
+      <h2>Лучший способ что бы начать</h2>
+      <img
+        class="cover"
+        style="max-width: 80%"
+        src="https://miro.medium.com/max/3840/1*EKXYhntirnqHjXdTGmLXyw.png"
+        alt=""
+      />
+    </section>
+
+    <section class="slide" id="expo-force-start">
+      <svg
+        class="cover"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1170 753.18"
+        width="100%"
+      >
+        <g>
+          <path
+            fill="#4630EB"
+            d="M500.27,673.3c113.23,0,91.36-101.15,183.82-101.15C805,572.15,749.9,455,877.78,455c108.94,0,66.9-139.16,159.26-139.16l131.45,197.94L924.82,674.28Z"
+          ></path>
+          <circle fill="#4630EB" cx="75.55" cy="375.42" r="75.55"></circle>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M368.84,259.62c-16-58.4,38.48-75.23,56.61-24.16,15.86,44.7,60.6,153,60.6,153l-68.52,11.48Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M482.09,137l7.9.2s-5.52-21.27-6.5-32.1Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M117.34,366.52a304,304,0,0,0-46,21.91V149.24a304.09,304.09,0,0,1,46-21.91Q117.34,246.93,117.34,366.52Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M166.17,355.56a304,304,0,0,0-48.84,11q0-119.59,0-239.19a303.94,303.94,0,0,1,48.84-11Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M216,355.56a304.84,304.84,0,0,0-49.78,0V116.38a304.91,304.91,0,0,1,49.78,0Q216,236,216,355.56Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M264.79,366.52a304.1,304.1,0,0,0-48.84-11q0-119.59,0-239.18a303.94,303.94,0,0,1,48.84,11Q264.79,246.92,264.79,366.52Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M310.8,388.43a303.93,303.93,0,0,0-46-21.91q0-119.59,0-239.18a304,304,0,0,1,46,21.91Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M71.32,197.08V149.24c76.79-44.19,162.7-44.18,239.48,0v47.84C234,152.9,148.12,152.9,71.32,197.08Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M71.32,244.92V197.08c76.79-44.18,162.7-44.18,239.48,0v47.84C234,200.74,148.12,200.73,71.32,244.92Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M71.32,340.59V292.75c76.79-44.18,162.7-44.18,239.48,0v47.84C234,296.41,148.12,296.41,71.32,340.59Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M71.32,388.43V340.59c76.79-44.18,162.7-44.18,239.48,0v47.84C234,344.25,148.12,344.24,71.32,388.43Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M251.15,415.68C239.19,343,291.4,210.31,366.48,165.1l58.12,36.11c6.4,53-25.8,205.6-25.8,205.6S334,412.84,251.15,415.68Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M393.15,94.23c4.63,21.94,21.71,47-19.67,67.52q-3.47,1.55-7,3.35l58.12,36.11,2.65-37.35s31.3,19.2,44.79,1.54c9.28-12.15,15.91-44.56,8.66-82.74C471.33,33.32,383.34,42.56,393.15,94.23Z"
+          ></path>
+          <rect
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            x="765.37"
+            y="139.08"
+            width="291.31"
+            height="495.02"
+            transform="translate(-62.88 562.44) rotate(-33.23)"
+          ></rect>
+          <rect
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            x="773.58"
+            y="237.63"
+            width="224.08"
+            height="224.08"
+            transform="translate(-46.81 542.49) rotate(-33.23)"
+          ></rect>
+          <rect
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            x="884.54"
+            y="538.45"
+            width="291.31"
+            height="60.1"
+            transform="translate(-143.08 657.49) rotate(-33.23)"
+          ></rect>
+          <circle
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            cx="1030.19"
+            cy="568.5"
+            r="20.37"
+            transform="translate(-143.08 657.49) rotate(-33.23)"
+          ></circle>
+          <line
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            x1="870.03"
+            y1="530.34"
+            x2="1012.32"
+            y2="437.13"
+          ></line>
+          <line
+            fill="none"
+            stroke="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            x1="886.23"
+            y1="555.06"
+            x2="979.95"
+            y2="493.66"
+          ></line>
+          <line
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            x1="44.97"
+            y1="673.3"
+            x2="1030.46"
+            y2="673.3"
+          ></line>
+          <rect
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            x="266.81"
+            y="503.32"
+            width="153.18"
+            height="169.98"
+          ></rect>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="419.47 561.44 266.29 673.3 419.47 673.3 419.47 561.44"
+          ></polygon>
+          <polygon
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="266.81 561.44 266.81 673.3 191.06 673.3 266.81 561.44"
+          ></polygon>
+          <circle
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            cx="160.24"
+            cy="654.97"
+            r="18.33"
+          ></circle>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M761,397.1a46.76,46.76,0,0,1-93.52,0Z"
+          ></path>
+          <rect
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            x="84.89"
+            y="612.22"
+            width="132.41"
+            height="22.86"
+            transform="translate(-357.46 232.32) rotate(-38.8)"
+          ></rect>
+          <polygon
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="714.21 673.48 783.47 673.48 714.21 535.29 644.95 673.48 714.21 673.48"
+          ></polygon>
+          <polygon
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="839.77 277.93 697.38 277.93 642.89 397.1 785.28 397.1 839.77 277.93"
+          ></polygon>
+          <rect
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            x="533.4"
+            y="381.49"
+            width="134.45"
+            height="15.62"
+          ></rect>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M428.49,165.1s-9.88-7.18-14.11-15.43"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M708.6,320.15c3-6.06,10.39-11,16.58-11s8.8,4.92,5.83,11-10.39,11-16.58,11S705.63,326.21,708.6,320.15Z"
+          ></path>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="769.19 359.08 718.27 359.08 718.27 359.08 793.64 309.17 769.19 359.08"
+          ></polygon>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M393.15,94.23c3.39,16.06,13.44,33.79,2.37,50.19h0s21-19.81,22.63-32.5c1.4-9.45-3.46-8.4-3.73-15.07-.46-11.35,20.36-14.78,15.46,4.26l-2.77,10.65C437.89,111,444,92.57,454,93.6l29.15,7a176.84,176.84,0,0,0-2.46-17.89C471.33,33.32,383.34,42.56,393.15,94.23Z"
+          ></path>
+          <polygon
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="792.42 381.49 667.85 381.49 667.85 397.1 784.98 397.1 792.42 381.49"
+          ></polygon>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M550.21,615.87s33.7-174.92,33.7-234.58c-79.48,6.33-247,26.05-332.76,34.38,0,0,20.41,86.42,110.49,86.42,75.88,0,139.62-26.22,139.62-26.22s-13.86,64.05-28.05,140h77Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M518.3,615.87H473.21a314.28,314.28,0,0,0-5.67,57.43H585.28C585.28,664.54,513.07,661.4,518.3,615.87Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M686.68,16.94H633.37V51.37h0c0,4,2.65,7.9,7.87,10.92,10.44,6,27.32,6,37.7,0,5.19-3,7.77-7,7.74-10.92h0Z"
+          ></path>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="548.1 51.55 580.87 32.58 613.75 51.55 580.87 70.53 548.1 51.55"
+          ></polygon>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="548.1 51.55 548.29 89.52 580.87 108.5 580.87 70.53 548.1 51.55"
+          ></polygon>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="613.85 51.55 613.64 89.52 581.07 108.5 581.07 70.53 613.85 51.55"
+          ></polygon>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="686.28 88.59 632.61 96.93 672.07 119.71 686.28 88.59"
+          ></polygon>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="632.61 96.93 632.61 134.97 672.07 157.64 672.07 119.71 632.61 96.93"
+          ></polygon>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M672.07,119.71"
+          ></path>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="686.28 88.59 686.28 125.39 672.07 157.64 672.07 119.71 686.28 88.59"
+          ></polygon>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M667.94,16.94V66.12a33.76,33.76,0,0,0,11-3.84c5.19-3,7.77-7,7.74-10.92h0V16.94Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M678.81,6c-10.44-6-27.32-6-37.69,0s-10.32,15.81.12,21.83,27.32,6,37.7,0,10.32-15.8-.13-21.83"
+          ></path>
+          <circle
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            cx="714.21"
+            cy="488.31"
+            r="23.68"
+          ></circle>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="644.95 673.48 760.97 628.59 783.47 673.48 644.95 673.48"
+          ></polygon>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M730.33,471a26.28,26.28,0,0,1-36,30.19,23.67,23.67,0,1,0,36-30.19Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M662.3,579.46H587l-68.8-192.27L399.84,399.91s134.57-95.53,170.1-72.25S662.3,579.46,662.3,579.46Z"
+          ></path>
+          <polygon
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="518.23 387.19 559.53 564.99 567.31 524.36 518.23 387.19"
+          ></polygon>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M667.85,397.1l88.8,19.64S761,409.12,761,397.1Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M548.52,252.48"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M468.85,646.57c24.52,0,38.5-12.89,51.84-12.89"
+          ></path>
+          <polygon
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            points="605.07 595.58 599.14 579.46 644.95 579.46 648.09 585.32 605.07 595.58"
+          ></polygon>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M605.06,595.58l43-10.26,13,10.26c8.29,8.67,22.6-27.7,34.56-23.3l-22,43.43-58.19,24.41C606.64,624.28,609.06,606.47,605.06,595.58Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M339.15,274.39c0,48.62,23.12,105.44,41.51,127.61l19.19-2.08,19.63-25.48Z"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M339.83,236.88s-16,90.78,60,163c0,0,92.08-64.85,172-86.91,0,0,12.18,11.17,26.39,7.14l2.37,12.65c1.09,10.06,8.88,11.45,8.88,11.45l.64-56C550,271.33,420,334.12,420,334.12s-13.67-26.67-20.16-85.2"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M470.16,313.32s-4.56-2.56,19.83,32.9"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M1067.73,670.07c0,45.07-38.72,81.61-86.48,81.61s-86.48-36.54-86.48-81.61h173"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M1042.2,634.82c-33.88-18.71-88.63-18.7-122.29,0s-33.49,49,.39,67.75,88.64,18.71,122.31,0,33.48-49-.41-67.75"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 1)"
+            fill="rgba(0, 0, 32, 1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M1005.5,655.22c-13.48-7.44-35.27-7.44-48.66,0s-13.32,19.51.16,27,35.27,7.44,48.66,0,13.32-19.51-.16-27"
+          ></path>
+          <path
+            stroke="rgba(0, 0, 32, 0.9)"
+            fill="#FFFFFF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4px"
+            d="M1006.06,668c-13.36-7.38-35-7.38-48.23,0a21.54,21.54,0,0,0-8.08,7.18,21.75,21.75,0,0,0,8.23,7.3c13.36,7.38,35,7.38,48.23,0a21.53,21.53,0,0,0,8.07-7.18A21.76,21.76,0,0,0,1006.06,668Z"
+          ></path>
+        </g>
+      </svg>
+
+      <div class="new">
+        <h2>С места в карьер (aka Expo)</h2>
         <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
+          <li><a href="https://snack.expo.io/">https://snack.expo.io/</a></li>
+          <li><a href="https://expo.io/top">https://expo.io/top</a></li>
+          <li>
+            <a href="https://github.com/unimodules/react-native-unimodules"
+              >react-native-unimodules</a
+            >
+          </li>
         </ol>
+      </div>
+
+      <style>
+        #expo-force-start .new {
+          padding: 75px 100px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.6);
+          -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
+          box-sizing: border-box;
+        }
+      </style>
     </section>
 
-    <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
+    <section class="slide" id="expo-top">
+      <img class="cover max-w-full max-h-full" src="pictures/top.png" alt="" />
     </section>
 
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
+    <section class="slide" id="demo-rn-explorer">
+      <a
+        href="https://play.google.com/store/apps/details?id=name.ratson.uiexplorer"
+      >
+        <video
+          autoplay
+          loop
+          preload="auto"
+          src="pictures/explore.mp4"
+          class="cover"
+        ></video>
+      </a>
     </section>
 
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
+    <section class="slide" id="dislike">
+      <h2>
+        What do you dislike about React Native?
+        <a
+          href="https://github.com/react-native-community/discussions-and-proposals/issues/104"
+          >#104</a
+        >
+      </h2>
+      <p class="next">Если кратко то претензий очень много</p>
+      <ol class="next">
+        <li>Upgrading requires a lot (too much?) effort</li>
+        <li>Debugging exceptions</li>
+        <li>Support of React Native team</li>
+        <li>Performance, performance, performance</li>
+        <li>...</li>
+      </ol>
+
+      <p class="next">
+        The last dislike thread
+        <a
+          href="https://github.com/react-native-community/discussions-and-proposals/issues/134"
+          >issues#134</a
+        >
+      </p>
     </section>
 
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
+    <section class="slide" id="upgrade">
+      <h2>Обновления</h2>
+      <p>Три платформы = три причины получить major update</p>
+      <p>
+        Во многого проблемы из-за недостаточной информации.
+        <a
+          href="https://react-native-community.github.io/upgrade-helper/?from=0.59.10&to=0.60.4"
+          >RN upgrade guide
+        </a>
+        как diff tool
+      </p>
+      <p>Иногда придётся изучать issues, чтобы найти решения для миграции</p>
     </section>
 
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
+    <section class="slide" id="bridge">
+      <h2>Ахиллесова пята*</h2>
+      <img
+        src="https://hackernoon.com/hn-images/1*JT_Smf1u3fJTBY8ev9WAzg.png"
+        alt=""
+        class="w-11/12"
+      />
     </section>
 
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+    <section class="slide" id="background-timers">
+      <h2>Асинхрощина</h2>
+      <ol>
+        <li>setTimeout</li>
+        <li>setInterval</li>
+        <li>requestAnimationFrame</li>
+        <li>requestIdleCallback</li>
+        <li>setImmediate</li>
+      </ol>
+      <p>
+        Когда приложение <b>в фоне</b> ваши таймеры не <b>будут исполняться</b>
+        <br />
+        Решение: использовать нативный модуль
+        <a href="https://github.com/ocetnik/react-native-background-timer"
+          >react-native-background-timer</a
+        >
+      </p>
     </section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
+    <section class="slide" id="symlinks">
+      <h2>Metro bundler</h2>
+      <img src="pictures/metro.png" style="max-width: 45%" />
+      <p>
+        <b>2+ года</b> не могут добавить поддержку symlink
+        <br />
+        Решение: выбрасываем metro и используем
+        <a href="https://github.com/callstack/haul">haul </a>(webpack под
+        капотом)
+      </p>
+    </section>
+
+    <section class="slide" id="monorepo">
+      <h2>Monorepo</h2>
+      <p>Не поддержки symlink скажи пока <b>lerna</b> monorepo *</p>
+      <ul>
+        <li class="next">
+          Нативные модули не должны "всплывать" в родительский node_modules
+        </li>
+        <li class="next">
+          <b>react-redux</b>
+          <a
+            href="https://github.com/reduxjs/react-redux/blob/8a1bb5805497d2ca000ccb693bca72b327c4e8b4/src/utils/reactBatchedUpdates.native.js#L1-L4"
+            >"магические" импорты</a
+          >
+        </li>
+        <li class="next">Ошибка: duplicate-react</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="navigation">
+      <h2>Navigation</h2>
+      <p>Два лидера</p>
+      <ul>
+        <li>
+          <img
+            src="https://github.com/wix/react-native-navigation/raw/master/.logo.png"
+            alt=""
+            class="icon"
+          />
+          <a href="https://wix.github.io/react-native-navigation/">
+            wix/react-native-navigation</a
+          >
+        </li>
+        <li>
+          <img
+            src="https://reactnavigation.org/img/spiro.svg"
+            class="icon"
+            alt=""
+          />
+          <a href="https://reactnavigation.org/"> react-navigation</a>
+        </li>
+      </ul>
+      <p class="next">
+        Team: We have our own native navigation system at Facebook that is not
+        open source ...
+      </p>
+      <style>
+        #navigation .icon {
+          max-width: 50px;
+          margin-right: 16px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="omg-errors">
+      <div class="flex justify-around">
+        <h2>
+          Очень<br />
+          понятные<br />
+          ошибки
         </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
-
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
+        <div><img src="pictures/err.jpg" alt="" /></div>
+      </div>
+      <style>
+        #omg-errors img {
+          margin-top: -5vw;
+          max-width: 25vw;
+        }
+      </style>
     </section>
 
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
+    <section class="slide" id="ecosystem-state">
+      <h2>Состояние экосистемы</h2>
+      <video
+        loop
+        autoplay
+        preload="auto"
+        src="https://video.twimg.com/tweet_video/D_sYfNJX4AEW5iI.mp4"
+        type="video/mp4"
+        class="cover"
+      ></video>
+      <img
+        src="https://pbs.twimg.com/media/EALKY3KW4AE5Ev5?format=png&name=900x900"
+        alt=""
+        class="cover next"
+      />
+
+      <div class="next bg">
+        <ol>
+          <li>
+            Много "мёртвых" не поддерживаемых модулей
+          </li>
+          <li>
+            Качество кода, сомнительные решения
+          </li>
+          <li>
+            Завод велосипедостраения
+          </li>
+        </ol>
+
+        <ul>
+          <li><a href="http://www.native.directory/">Native Directory</a></li>
+          <li>
+            <a href="https://js.coach/?collection=React+Native"
+              >JS.coach + React Native</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <style>
+        #ecosystem-state h2 {
+          margin-top: -3%;
+        }
+
+        #ecosystem-state .bg:after {
+          background: rgba(255, 255, 255, 0.6);
+          -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          content: "";
+          z-index: -1;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="keyboardavoidingview">
+      <div class="flex">
+        <div>
+          <h2>Изящно реагировать при появлении клавиатуры</h2>
+          <h3>или ужасный KeyboardAvoidingView</h3>
+        </div>
+        <div>
+          <img
+            src="https://cdn-images-1.medium.com/max/800/1*dcFgfha_NfuPIi4YqEnsmQ.gif"
+            alt=""
+          />
+        </div>
+      </div>
+      <style>
+        #keyboardavoidingview img {
+          max-width: 30vw;
+          max-height: 60vh;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="apple-oh-common">
+      <h2 class="next">APPLE</h2>
+      <img
+        src="https://www.outerplaces.com/media/k2/items/cache/985c4b395c49453c79ecfabc2f194dfa_L.jpg"
+        alt=""
+        class="cover"
+      />
+      <style>
+        #apple-oh-common h2 {
+          position: absolute;
+          top: 65%;
+          left: 48%;
+          color: white;
+          text-shadow: 0 0 2px #000;
+          font-size: 2.7em;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="sign">
+      <img
+        src="https://docs.fastlane.tools/img/fastlane_text.png"
+        alt=""
+        class="absolute right-0 bottom-0 max-w-sm"
+      />
+      <h2>Sign code</h2>
+
+      <h3>iOS</h3>
+      <ul>
+        <li>
+          <a href="https://codesigning.guide/"
+            >Сертификаты и профили в вашей команде</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://docs.fastlane.tools/getting-started/cross-platform/react-native/"
+            >Fastline + react-native (сборка и публикация)</a
+          >
+        </li>
+      </ul>
+
+      <h3>Android</h3>
+      <ul>
+        <li>
+          <a
+            href="https://facebook.github.io/react-native/docs/signed-apk-android"
+            >Публикация в Google Play Store
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="feature">
+      <h2>
+        <a
+          href="https://github.com/react-native-community/discussions-and-proposals"
+          >Discussions and Proposals</a
+        >
+      </h2>
+      <ul>
+        <li>Official Docker</li>
+        <li>Lean Core</li>
+        <li>Auto linking</li>
+        <li>Turbo Modules</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="results">
+      <h2>Выводы</h2>
+
+      <ul>
+        <li>Шаринг кода между платформами</li>
+        <li>Инкапсуляция кода над платформами</li>
+        <li>Нативные модули пишутся только когда это единственный вариант</li>
+        <li>Все еще есть куда расти и развиваться</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="q/a">
+      <h2>Вопросы ?</h2>
+    </section>
+
+    <section class="slide" id="twitter">
+      <img src="pictures/dan.png" class="cover" />
+    </section>
+
+    <section class="slide" id="news">
+      <img src="pictures/twitter.png" class="cover" />
+    </section>
 
     <div class="progress"></div>
 
     <script src="shower/shower.min.js"></script>
-    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
-
-</body>
+    <script src="prism.js"></script>
+  </body>
 </html>

@@ -19,7 +19,7 @@
     border-radius: 0.2em;
 }
 
-.slide code,
+.slide code:not([class]),
 .slide kbd,
 .slide samp {
     background: var(--color-fill);
