@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>FBT - i18n framework</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="prism.css" />
+    <link rel="stylesheet" href="t.css" />
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+  </head>
+  <body
+    class="shower list"
+    data-v-console="false"
+    data-v-page="home"
+    data-v-tablet="1200"
+    data-v-mobile="980"
+  >
+    <canvas class="page__canvas fullHeight"></canvas>
+
+    <header class="caption">
+      <h1>i18n js приложений без боли</h1>
+      <p>
+        Доклад о
+        <a href="https://facebookincubator.github.io/fbt/">fbt</a>
+        Немного о самой технологии, как использовать, подводные камни.
+      </p>
+    </header>
+
+    <section class="slide" id="begin">
+      <h2>
+        <a href="https://david-talks.netlify.com/fbt/index.html"
+          >https://david-talks.netlify.com/fbt/index.html</a
+        >
+      </h2>
+      <img src="pictures/qr-david-talks-net.svg" />
+    </section>
+
+    <section class="slide" id="welcome">
+      <h2>Интернационализация джаваскрипт приложений</h2>
+
+      <img src="pictures/fbt.png" class="cover" />
+      <p class="next">
+        FBT =>
+      </p>
+    </section>
+
+    <section class="slide" id="plan">
+      <h2>План:</h2>
+      <ol>
+        <li class="next">Fbt - что такое, преимущества, подход;</li>
+        <li class="next">Рассмотрим примеры;</li>
+        <li class="next">Покапаемся внутри;</li>
+        <li class="next">Поговорим о проблемах;</li>
+        <li class="next">Сделаем выводы.</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="fbt-what">
+      <h2>FBT</h2>
+      <blockquote>
+        FBT is a framework for internationalizing user interfaces in JavaScript
+      </blockquote>
+    </section>
+
+    <section class="slide" id="fbt-release">
+      <a href="https://twitter.com/fbt_js">
+        <img src="pictures/twitter.png" alt="" class="cover" />
+      </a>
+    </section>
+
+    <section class="slide" id="fbt-but-release">
+      <a
+        href="https://github.com/facebook/flow/commit/8a662d3ca5fab53a703bb8d18068744d12343b45#diff-ac68892d257659dc9662f470477dab19"
+      >
+        <img src="pictures/flow.png" alt="" class="cover" />
+      </a>
+    </section>
+
+    <section class="slide" id="hands-on-tutorial">
+      <iframe
+        class="cover"
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/D3W9iNPsGjE"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <section class="slide" id="fbt-first">
+      <h2>FBT - ?</h2>
+
+      <blockquote>
+        <p>
+          <em>Probably</em> <strong>F</strong>ace<strong>b</strong>ook
+          <strong>T</strong>ranslation?<br />
+          However, even internally, we never use that terminology. It's always
+          just referred to as "FBT".
+        </p>
+      </blockquote>
+      <a
+        href="https://facebookincubator.github.io/fbt/blog/2018/02/14/blog-post"
+      >
+        original ...
+      </a>
+    </section>
+
+    <section class="slide" id="story">
+      <h2 style="margin-top: -1em">Настало время замечательных историй</h2>
+      <p class="next">
+        <a style="color: #fff" href="https://github.com/tc39/proposals"
+          >tc39/proposals</a
+        >
+      </p>
+      <img src="pictures/story.jpg" alt="" class="cover" />
+    </section>
+
+    <section class="slide" id="linus">
+      <h2 class="next cover">
+        “Talk is cheap. Show me the code.”
+      </h2>
+      <img
+        class="cover"
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0b749df4-537f-43aa-891b-157ebe855825/d540bpa-1c7165a0-d826-4952-9775-2eb82867f087.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBiNzQ5ZGY0LTUzN2YtNDNhYS04OTFiLTE1N2ViZTg1NTgyNVwvZDU0MGJwYS0xYzcxNjVhMC1kODI2LTQ5NTItOTc3NS0yZWI4Mjg2N2YwODcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-klRDpg61ISbNdbD3dFZNQWMYppR2eQyi3y4p2RRyRM"
+        alt=""
+      />
+        <style>
+            #linus .next.active{
+                z-index: 1;
+            }
+            #linus .next.active + img{
+            filter: blur(20px);
+
+        }</style>
+    </section>
+
+    <section class="slide" id="simple-code">
+      <div class="code">
+        <script type="text/plain" class="language-jsx">
+  import React, { useState } from "react";
+  import { Text } from "react-native";
+
+  import fbt from "fbt";
+
+  const App = () => {
+    const [userName] = useState("Alexandros");
+
+    return (
+      <Text>
+          <fbt desc="welcome message text">
+            Hello <fbt:param name="userName">{userName}</fbt:param>!
+          </fbt>
+      </Text>
+    );
+  };
+        </script>
+      </div>
+      <style>
+        #simple-code .code {
+          margin-top: -40px;
+          font-size: 21px;
+          max-width: 90%;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="build-result">
+      <h2>На самом деле</h2>
+      <div class="code">
+        <script type="text/plain" class="language-jsx">
+  _fbt.default._(
+      'Hello {userName}!',
+      [_fbt.default._param('userName', userName)],
+      {
+          hk: 'X60py',
+      },
+  )
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="babel-conf">
+        <h2>babel.config.js</h2>
+        <div class="code">
+            <script type="text/plain" class="language-jsx">
+  module.exports = {
+    plugins: [
+      'babel-plugin-fbt-runtime',
+      ['babel-plugin-fbt', {fbtEnumPath}],
+    ],
+    presets: ['module:metro-react-native-babel-preset'],
+  };
+            </script>
+        </div>
+    </section>
+
+    <section class="slide" id="fbt-minuses-2">
+      <h2>Синтаксический сахар</h2>
+      <div class="code">
+        <script type="text/plain" class="language-jsx">
+  import fbt from "fbt";
+
+  const MyFbt = (props) => ( // It don't work (
+    <fbt
+      author="ShowMeUrManager"
+      doNotExtract={false}
+      project="ui"
+      {...props}
+    />
+  );
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="methods">
+      <h2>
+        <a href="https://facebookincubator.github.io/fbt/docs/api_intro"
+          >API docs</a
+        >
+      </h2>
+      <ul>
+        <li><code>&lt;fbt/&gt; fbt(...)</code></li>
+        <li><code>&lt;fbt:enum/&gt; fbt.enum(...)</code></li>
+        <li><code>&lt;fbt:param/&gt; fbt.param(...)</code></li>
+        <li><code>&lt;fbt:name/&gt; fbt.name(...)</code></li>
+        <li><code>&lt;fbt:same-param/&gt; fbt.sameParam(...)</code></li>
+        <li><code>&lt;fbt:plural/&gt; fbt.plural(...)</code></li>
+        <li><code>&lt;fbt:pronoun/&gt; fbt.pronoun(...)</code></li>
+      </ul>
+    </section>
+
+    <section class="slide" id="omg-errors">
+      <h2>fbt(...) => string ?</h2>
+
+      <div class="code" style="float: left; font-size: 14px">
+        <script type="text/plain" class="language-jsx">
+  {
+    $$typeof: Symbol(react.element)
+    props: {content: Array(0: "Привет Alexandros!")}
+    type: ƒ FbtComponent(props)
+    _contents: ["Привет Alexandros!"]
+    _stringValue: null
+    key: null
+    ref: null
+    ...
+  }
+        </script>
+      </div>
+      <img src="pictures/err.jpg" alt="" />
+      <style>
+        #omg-errors img {
+          margin-top: -5vw;
+          max-width: 25vw;
+          float: right;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="alert-exmaple">
+      <h2 style="margin-top: -50px">
+        .toString()
+      </h2>
+      <div class="code" style="font-size: 13px">
+        <script type="text/plain" class="language-jsx">
+  import { Alert } from 'react-native';
+
+  Alert.alert(
+    fbt('Confirmations', 'logout alert title').toString(),
+    fbt(
+      'Are you sure you want to Logout?',
+      'logout alert message text',
+    ).toString(),
+    [
+      {
+        text: fbt('Yes', 'positive logout alert button text').toString(),
+        onPress: () => {},
+      },
+      {
+        text: fbt('Cancel', 'negative logout alert button text').toString(),
+        onPress: () => {},
+        style: 'cancel',
+      },
+    ],
+    { cancelable: false },
+  );
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="simple-code2">
+      <h2 style="margin-top: -40px">
+        <a href="https://facebookincubator.github.io/fbt/docs/params"
+          >Parameters</a
+        >
+      </h2>
+      <div class="code">
+        <script type="text/plain" class="language-jsx">
+  <fbt desc="welcome message text" project='ui'>
+     Hello <fbt:param name="userName">{userName}</fbt:param>!
+  </fbt>;
+
+  fbt(
+    `Hello ${fbt.param("userName", userName)})}!`,
+    "welcome message text",
+    { project:"ui" }
+  );</script>
+      </div>
+      <p>
+        <a href="https://babeljs.io/docs/en/babel-preset-react#throwifnamespace"
+          >Babel: Namespace tags are not supported by default.</a
+        >
+      </p>
+    </section>
+
+    <section class="slide" id="wrapper-text">
+      <h2>
+        <a href="https://facebookincubator.github.io/fbt/docs/autoparam"
+          >Auto-parameterization</a
+        >
+        (for dev)
+      </h2>
+      <div class="code">
+        <script type="text/plain" class="language-jsx">
+  <Text>
+    <fbt desc="styled text">
+      Is this
+      <Text onPress={cb} style={{ color: "red" }}>color</Text>
+      green?
+    </fbt>
+  </Text>
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="wrapper-text-result">
+      <h2>
+        <a href="https://facebookincubator.github.io/fbt/docs/autoparam"
+          >Auto-parameterization</a
+        >
+        (for translator)
+      </h2>
+      <div class="code">
+        <script type="text/plain" class="language-jsx">
+  {
+    hashToText: { xxx: "Is this {=color} green?" },
+    desc: "styled text"
+  },
+  {
+    hashToText: { xxx: "color" },
+    desc: 'In the phrase: "Is this {=color} green?"'
+  }
+        </script>
+      </div>
+    </section>
+
+
+    <section class="slide" id="duplicate params">
+        <h2>
+            <a href="https://facebookincubator.github.io/fbt/docs/params#duplicate-tokens">Duplicate params</a>
+
+        </h2>
+        <div class="code">
+            <script type="text/plain" class="language-jsx">
+  <fbt desc="dublcated param example">
+    <fbt:name name="name" gender={GENDER}>
+      {name}
+    </fbt:name>
+    shared a link. Tell
+    <fbt:same-param name="name" />
+    you liked it.
+  </fbt>
+        </script>
+        </div>
+    </section>
+
+    <section class="slide" id="auto-parameterization-demo">
+      <h2>Demo: *</h2>
+    </section>
+
+    <section class="slide" id="CLDR">
+      <h2>
+        <a href="https://facebookincubator.github.io/fbt/docs/standards"
+          >CLDR</a
+        >
+      </h2>
+      <a
+        href="https://github.com/facebookincubator/fbt/blob/master/runtime/nonfb/IntlNumberType.js"
+      >
+        IntlNumberType
+      </a>
+      <br />
+      <a href="https://npmfs.com/package/fbt/0.10.2/lib/">
+        fbt/libs
+      </a>
+    </section>
+
+    <section class="slide" id="fbt-translate">
+      <h2>Как перевести текст?</h2>
+
+      <ol>
+        <li class="next">Enum manifest</li>
+        <li class="next">Extracting translatable texts (Collect FBT)</li>
+        <li class="next">Translate</li>
+      </ol>
+      <p class="next">
+        Gist:
+        <a
+          href="https://gist.github.com/retyui/89515f67e32ad7abcd70d58ce222a879"
+          >fbt.sh</a
+        >
+      </p>
+    </section>
+
+    <section class="slide" id="fbt-pluses">
+      <h2>Преимущества</h2>
+      <ul>
+        <li>Ваш код источник переводов</li>
+        <li>Гибкий и мощный</li>
+        <li>Легко интегрируется в проект</li>
+        <li>Поддрежка JSX</li>
+        <li>Легко типизиуемый*</li>
+        <li>Хорошая обратная связь</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="fbt-minuses">
+      <h2>Недостатки</h2>
+      <ul>
+        <li>Документация (не достаточно примеров);</li>
+        <li>Не разборчивые ошибки;</li>
+        <li>Танцы с бубном, что бы подружить с ts;</li>
+        <li class="next">Getting Started;</li>
+        <li class="next">Синтаксический сахар.</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="fbt-minuses-1">
+
+          <iframe
+                  class="cover"
+                  width="100%"
+                  height="100%"
+                  style="background: #fff"
+                  src="https://facebookincubator.github.io/fbt/docs/getting_started" frameborder="0"></iframe>
+
+    </section>
+
+    <section class="slide" id="shut-up-and-take-my-money">
+      <h2>Если вы решили внедрить у себя</h2>
+      <ul class="next">
+        <li>
+          Посмотреть
+          <a href="https://www.youtube.com/watch?v=D3W9iNPsGjE"
+            >нормальный доклад</a
+          >
+        </li>
+        <li>
+          Потрогать
+          <a
+            href="https://github.com/facebookincubator/fbt/tree/master/demo-app"
+            >реальное демо</a
+          >
+        </li>
+        <li>
+          Почитать
+          <a href="https://facebookincubator.github.io/fbt/docs/getting_started"
+            >документацию</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="one-moment">
+      <h2>Что если возникли вопросы</h2>
+      <ul class="next">
+        <li>
+          Пообщаться с разработчиками
+          <a href="https://discord.gg/cQvXZr5">Discord</a>
+        </li>
+        <li>
+          Спросить на
+          <a href="https://stackoverflow.com/questions/tagged/fbt"
+            >Stack Overflow</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="q\a">
+      <h2>Вопросы ?</h2>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <script src="prism.js"></script>
+    <script src="a.js"></script>
+  </body>
+</html>

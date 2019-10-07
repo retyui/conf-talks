@@ -1,0 +1,48 @@
+/* Styles */
+
+@import "fonts.css";
+@import "shower/shower.css";
+@import "blocks/badge.css";
+@import "blocks/caption.css";
+@import "blocks/progress.css";
+@import "blocks/region.css";
+@import "slide/slide.css";
+
+.code {
+  background: #fff;
+}
+
+.slide h2 {
+  color: #fff;
+}
+.slide {
+  /*background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);*/
+  /*background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);*/
+  /*background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);*/
+  /*background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);*/
+  /*  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);*/
+  /*background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);*/
+  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+}
+.slide::after {
+  background: none;
+  background-color: #fff;
+  color: #000;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.page__canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120% !important;
+}
+
+.caption {
+  color: #fff;
+  z-index: 1;
+}
