@@ -379,8 +379,8 @@
         </div>
     </section>
 
-    <section class="slide" id="auto-parameterization-demo">
-      <h2>Demo: *</h2>
+    <section class="slide" id="auto-demo">
+      <h2>Demo: real app</h2>
     </section>
 
     <section class="slide" id="CLDR">
@@ -398,6 +398,11 @@
       <a href="https://npmfs.com/package/fbt/0.10.2/lib/">
         fbt/libs
       </a>
+        <ul>
+            <li><code>NUMBER_ONE</code>: 1 това<span style="color:red; font-style: italic">р</span> в корзине</li>
+            <li><code>NUMBER_FEW</code>: 3 тоав<span style="color:red; font-style: italic">ра</span> в корзине</li>
+            <li><code>NUMBER_MANY</code>: 10 това<span style="color:red; font-style: italic">ров</span> в корзине</li>
+        </ul>
     </section>
 
     <section class="slide" id="fbt-translate">
@@ -417,6 +422,10 @@
       </p>
     </section>
 
+    <section class="slide" id="source-demo">
+        <h2>Demo: fbt source</h2>
+    </section>
+
     <section class="slide" id="fbt-pluses">
       <h2>Преимущества</h2>
       <ul>
@@ -430,26 +439,82 @@
     </section>
 
     <section class="slide" id="fbt-minuses">
-      <h2>Недостатки</h2>
-      <ul>
-        <li>Документация (не достаточно примеров);</li>
-        <li>Не разборчивые ошибки;</li>
-        <li>Танцы с бубном, что бы подружить с ts;</li>
-        <li class="next">Getting Started;</li>
-        <li class="next">Синтаксический сахар.</li>
-      </ul>
+        <h2>Недостатки</h2>
+        <ul>
+            <li>Документация (не достаточно примеров);</li>
+            <li>Не разборчивые ошибки;</li>
+            <li>Танцы с бубном, что бы подружить с ts;</li>
+            <li class="next">Синтаксический сахар.</li>
+            <li class="next">Getting Started;</li>
+        </ul>
     </section>
 
     <section class="slide" id="fbt-minuses-1">
 
-          <iframe
-                  class="cover"
-                  width="100%"
-                  height="100%"
-                  style="background: #fff"
-                  src="https://facebookincubator.github.io/fbt/docs/getting_started" frameborder="0"></iframe>
+        <iframe
+                class="cover"
+                width="100%"
+                height="100%"
+                style="background: #fff"
+                src="https://facebookincubator.github.io/fbt/docs/getting_started" frameborder="0"></iframe>
 
     </section>
+
+
+    <section class="slide" id="fbt-minuses-ts">
+        <h2 style="margin-top: -50px">
+            Typescript compiler <a
+                href="http://www.typescriptlang.org/play/?target=99&jsx=2#code/JYWwDg9gTgLgBAJQKYEMDG8BmUIjgcilQ3wG4AocgEyTQBsUi40IA7AZywCMYAuRYjAB0AYVyRWSVjAAqATzBIAPAG8AvgD4KlGvUZI4rFCCTsw6AwCkAygA04K8nDjBpSKJgtwAktKiv2YDQAUTokE2l2BydnOEwefhRWOQAaOBi1ckzyFg54FDgAXjgleL5zKGM4AHotSiA">&#x3C;fbt:param/&#x3E;
+        </a> syntax
+            <br>
+            +
+            <br><span class="next">@babel/preset-typescript</span>
+        </h2>
+
+        <iframe
+                class="next"
+                width="560" height="315" src="https://www.youtube.com/embed/jPLKXEUm0jE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </section>
+
+    <section class="slide" id="fbt-fix-ts">
+        <style>
+            #fbt-fix-ts h2{
+                margin-top: -50px;
+            }
+            #fbt-fix-ts .next:not(.active){
+                display: none;
+            }
+            #fbt-fix-ts .next.active + .giphy-embed{
+                display: none;
+            }
+        </style>
+        <h2>Как подружить fbt с typescript?</h2>
+
+
+        <ul class="next">
+            <li>Выбрасываем tsc и используем babel + preset-typescript</li>
+            <li>Вместо <code>&#x3C;fbt:param/&#x3E;</code> синтаксиса используем не документированый <code>&#x3C;FbtParam/&#x3E;</code>
+
+                <a href="https://github.com/facebookincubator/fbt/blob/a5a6f6ab2e53c093f449bd3b123c20e78c35615d/transform/babel-plugin-fbt/FbtUtil.js#L57-L66">синтаксис</a>
+                </li>
+            <li>Не забываем добавить ts
+                <a href="https://gist.github.com/retyui/c3bd35220fb5c95c322df866834f0913">libdefs</a>
+                 для fbt</li>
+
+            <li>И
+                <a href="https://gist.github.com/retyui/c55d0ccb6c4ee92e496789f002cb620a">делаем патч</a>
+                 для <code>@babel/plugin-transform-typescript</code></li>
+        </ul>
+        <iframe
+
+                src="https://giphy.com/embed/ijN0fTltxT71K" width="384" height="480" frameBorder="0"
+                class="giphy-embed" allowFullScreen></iframe>
+
+    </section>
+
+
+
 
     <section class="slide" id="shut-up-and-take-my-money">
       <h2>Если вы решили внедрить у себя</h2>
