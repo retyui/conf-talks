@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Offline-friendly react-native apps</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="prism.css" />
+    <link rel="stylesheet" href="t.css" />
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css" />
+    <link rel="stylesheet" href="canvas.css" />
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+  </head>
+  <body
+    class="shower list"
+    data-v-console="false"
+    data-v-page="home"
+    data-v-tablet="1200"
+    data-v-mobile="980"
+  >
+    <canvas class="page__canvas fullHeight"></canvas>
+
+    <header class="caption">
+      <h1>Offline-friendly react-native apps</h1>
+      <p>
+        В этом докладе я расскажу о своем опыте внедрения поддержки оффлайн в
+        приложении
+      </p>
+    </header>
+
+    <section class="slide" id="begin">
+      <h2>
+        <a href="https://david-talks.netlify.com/offline/index.html"
+          >https://david-talks.com/offline</a
+        >
+      </h2>
+      <img src="pictures/qr-david-talks-net.svg" style="max-width: 35%" />
+    </section>
+
+    <section class="slide" id="welcome">
+      <h2>Offline-friendly react-native apps</h2>
+      <img
+        src="https://www.inovex.de/blog/wp-content/uploads/2017/12/network-anomaly-detection-online-offline.png"
+        alt=""
+        class="cover"
+      />
+    </section>
+
+    <section class="slide" id="plan">
+      <h2>План:</h2>
+      <ol>
+        <li class="next">Подходы</li>
+        <li class="next">Плохие практики</li>
+        <li class="next">Наш опыт</li>
+        <li class="next">Не было упомянуто</li>
+      </ol>
+    </section>
+    <section class="slide" id="no-offline">
+      <h2>Не упоминать о оффлайне</h2>
+      <ul>
+        <li>Airbnb</li>
+        <li>Instagram</li>
+        <li>Snapchat</li>
+        <li>Gmail</li>
+      </ul>
+      <img src="pictures/2.jpg" alt="" class="app-example" />
+    </section>
+
+    <section class="slide" id="no-connection-no-content">
+      <h2>Вы оффлайн, давай гуляй</h2>
+      <ul>
+        <li>YouTube</li>
+      </ul>
+      <img src="pictures/1.jpg" alt="" class="app-example" />
+    </section>
+
+    <section class="slide" id="i-think-you-are-offline">
+      <h2>Может намекнуть на ...</h2>
+      <p>Realtime приложения</p>
+      <img src="pictures/4.jpg" alt="" class="app-example" />
+    </section>
+
+    <section class="slide" id="is-not-good-practices">
+      <h2>Возможно не стоит...</h2>
+      <ol>
+        <li>Постоянно напоминать о оффлйне</li>
+        <li>Блокировать доступ к критическим данным</li>
+        <li>Забывать о юзере (разлогин)</li>
+        <li>Использовать NetInfo для проверки оффлайн режима</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="stop-use-netinfo-in-wrong-cases">
+      <h2>NetInfo — это не про оффлайн!</h2>
+      <img src="pictures/6.png" alt="" style="max-width: 100%" />
+    </section>
+
+    <section class="slide" id="how-add-offline-support">
+      <h2>How quickly add offline support</h2>
+      <ul>
+        <li class="next">
+          <a href="https://github.com/rgommezz/react-native-offline"
+            >react-native-offline</a
+          >
+          set of utilities
+        </li>
+        <li class="next">
+          <a href="https://github.com/DylanVann/react-native-fast-image"
+            >react-native-fast-image</a
+          >
+          for images
+          <span class="next">✔️</span>
+        </li>
+        <li class="next">
+          <span class="underline next">redux-persist</span>
+          for redux state
+        </li>
+        <li class="next"><a href="https://realm.io/">Realm</a></li>
+        <li class="next">
+          <a href="https://github.com/Nozbe/WatermelonDB">WatermelonDB</a> (hi
+          <a
+            href="https://nozbe.github.io/WatermelonDB/Installation.html#react-native-setup"
+            >legacy</a
+          >)
+        </li>
+        <li class="next">
+          Something your
+          <span class="next">✔️</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="fetch-flow">
+      <h2>One source of truth (*fetch flow)</h2>
+      <ol>
+        <li>React lifecycle \ pull to refresh</li>
+        <li>Api layer or fallback from local storage</li>
+        <li>Normalization (response => your index)</li>
+        <li>Indexation (state manager)</li>
+        <li>Serialization and save locally (cache manager)</li>
+        <li>Clean expired content</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="StorageResource">
+      <h2>Первая реализация</h2>
+      <div class="code">
+        <script type="text/plain" class="language-ts">
+          class StorageResource<Entity extends { id: ItemId }> {
+              constructor({ type, serializer }): StorageResource;
+
+              getItems(ids: Array<string>): DaoIndex<Entity> | null;
+              multiRemove(ids: Array<ItemId>): Promise<void>;
+              setItems(items: Array<Entity>): Promise<void>;
+
+              cleanAll(): Promise<void>;
+              cleanUp(options: { days: number }): Promise<void>;
+
+              parseItem(rawItem: string): Entity;
+              serializeItem(item: Entity): string;
+              trackLastRead(ids: Array<ItemId>): Promise<void>;
+            }
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="usage-StorageResource">
+      <div class="code">
+        <script type="text/plain" class="language-ts">
+          const usersStorage = StorageResource({ type: 'users', serializer });
+
+          usersStorage.setItems([{ id: 1, name: 'Davyd' }]);
+
+          /*
+          AsyncStorage: {
+              'CV::users::1': '{"id":1,"name":"Davyd"}',
+              'LR::users::1': '1573942810000',
+          }
+          */
+
+          usersStorage.getItems([1]);
+          // AsyncStorage: {'LR::users::1': '1573942820000',}
+
+          usersStorage.getItems([1]);
+          // AsyncStorage: {'LR::users::1': '1573942830000',}
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="need-SubStorageResource">
+      <h2>В реальности общение с API не обходиться только id</h2>
+      <code>GET /current/user</code>
+      <br />
+      <code>GET /data?include=magic</code>
+    </section>
+
+    <section class="slide" id="SubStorageResource-code">
+      <div class="code">
+        <script type="text/plain" class="language-ts">
+          class StorageResourceWithHelpers<
+            Entity extends { id: ItemId }
+          > extends StorageResource<Entity> {
+            setCustomIds(key: string, ids: Array<ItemId>): Promise<void>;
+            getCustomIds(key: string): Promise<Array<ItemId> | null>;
+            removeCustomKeys(keys: Array<string>): Promise<void>;
+          }
+        </script>
+      </div>
+    </section>
+
+    <section>
+      <div class="code">
+        <script type="text/plain" class="language-ts">
+          const handlerOfflineRejects = async (...args: Args) => {
+              try {
+                  const itemsIds = await apiMethod(...args).then((ids) => {
+                      onGetIds(ids);
+
+                      return ids;
+                  });
+
+                  return itemsIds;
+              } catch (error) {
+                  if (isNetworkError(error)) {
+                      const resourcesIndex = await storageMethod();
+
+                      if (resourcesIndex) {
+                          dispatch(indexResources(resourcesIndex));
+
+                          return extractIdsByData(...);
+                      }
+                  }
+
+                  throw error;
+              }
+          };
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="that-is-it">
+      <h2>
+        Будьте пессимистичны \ оптимистичны и прагматичны в ваших интерфейсах
+      </h2>
+      <p>* доверяйте вашему девайсу не соединению</p>
+    </section>
+
+    <section class="slide" id="q\a">
+      <h2>Вопросы ?</h2>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <script src="prism.js"></script>
+    <script src="a.js"></script>
+  </body>
+</html>
