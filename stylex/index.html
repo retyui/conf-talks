@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>styleX - Better styling for react-native</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="prism.css" />
+    <link rel="stylesheet" href="t.css" />
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css" />
+    <link rel="stylesheet" href="canvas.css" />
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+  </head>
+  <body
+    class="shower list"
+    data-v-console="false"
+    data-v-page="home"
+    data-v-tablet="1200"
+    data-v-mobile="980"
+  >
+    <canvas class="page__canvas fullHeight"></canvas>
+
+    <header class="caption">
+      <h1>styleX</h1>
+      <p>Styling for react-native</p>
+    </header>
+
+    <section class="slide" id="begin">
+      <h2>
+        <a href="https://david-talks.netlify.com/offline/index.html"
+          >https://david-talks.netlify.com/offline</a
+        >
+      </h2>
+      <img src="pictures/qr-david-talks-net.svg" style="max-width: 35%" />
+    </section>
+
+    <section class="slide flex justify-center" id="welcome">
+      <h2>Offline-friendly react-native apps</h2>
+      <img
+        src="https://cdn.dribbble.com/users/3266449/screenshots/6640106/offline_mode_dribble.jpg"
+        alt=""
+        class="cover"
+      />
+    </section>
+
+    <section class="slide" id="plan">
+      <img
+        class="cover"
+        src="https://cdn.dribbble.com/users/1314717/screenshots/3010018/offline-vs.-online.png"
+        alt=""
+      />
+      <h2 style="margin-top: -10px">План:</h2>
+      <ol>
+        <li class="next">Подходы;</li>
+        <li class="next">Плохие практики;</li>
+        <li class="next">Наш опыт;</li>
+        <li class="next">Примеры.</li>
+      </ol>
+      <div class="next">
+        <h5>Не упомянуто</h5>
+        <ol>
+          <li>Пользовательское управление кешем (music\podcast apps);</li>
+          <li>Cинхронизация.</li>
+        </ol>
+      </div>
+    </section>
+    <section
+      class="slide"
+      id="how-other-do"
+      style="background: rgb(255, 208, 69)"
+    >
+      <img
+        class="cover"
+        src="https://cdn.dribbble.com/users/285333/screenshots/4116004/t-rex.png"
+        alt=""
+      />
+      <h2>Подходы</h2>
+    </section>
+
+    <section class="slide" id="no-offline">
+      <h2>Не упоминать о оффлайне</h2>
+      <ul>
+        <li>Airbnb;</li>
+        <li>Instagram;</li>
+        <li>Snapchat;</li>
+        <li>Gmail.</li>
+      </ul>
+      <img src="pictures/2.jpg" alt="" class="app-example" />
+    </section>
+
+    <section class="slide" id="no-connection-no-content">
+      <h2>Ничего не показывать</h2>
+      <ul>
+        <li>YouTube.</li>
+      </ul>
+      <img src="pictures/1.jpg" alt="" class="app-example" />
+    </section>
+
+    <section class="slide" id="i-think-you-are-offline">
+      <h2>Заявить о потребностях ...</h2>
+      <ul>
+        <li>Мессенджеры;</li>
+        <li>Realtime приложения.</li>
+      </ul>
+      <img src="pictures/4.jpg" alt="" class="app-example" />
+    </section>
+
+    <section class="slide" id="is-not-good-practices">
+      <h2>Возможно не стоит...</h2>
+      <ol>
+        <li>Постоянно напоминать о оффлйне;</li>
+        <li>Блокировать доступ к критическим данным;</li>
+        <li>Забывать о юзере (разлогин);</li>
+        <li>Использовать NetInfo для проверки оффлайн режима.</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="stop-use-netinfo-in-wrong-cases">
+      <h2>NetInfo — это не про оффлайн!</h2>
+      <img src="pictures/6.png" alt="" style="max-width: 100%" />
+    </section>
+
+    <section class="slide" id="how-add-offline-support">
+      <h2>How quickly add offline support</h2>
+      <ul>
+        <li class="next">
+          <a href="https://github.com/rgommezz/react-native-offline"
+            >react-native-offline</a
+          >
+          set of utilities
+        </li>
+        <li class="next">
+          <span class="underline next">redux-persist</span>
+          for redux state
+        </li>
+        <li class="next"><a href="https://realm.io/">Realm</a></li>
+        <li class="next">
+          <a href="https://github.com/Nozbe/WatermelonDB">WatermelonDB</a> (hi
+          <a
+            href="https://nozbe.github.io/WatermelonDB/Installation.html#react-native-setup"
+            >legacy</a
+          >)
+        </li>
+        <li class="next">
+          Something your
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide flex items-baseline justify-center" id="offline-img">
+      <h3>
+        <span class="bg-blue-100">
+          Offline images
+          <a
+            class="next"
+            href="https://github.com/DylanVann/react-native-fast-image"
+            >react-native-fast-image</a
+          >
+          ✔️</span
+        >
+      </h3>
+      <img
+        src="https://cdn.dribbble.com/users/374132/screenshots/3520544/bolt-camera.png"
+        class="cover"
+        alt=""
+      />
+      <style>
+        #offline-img {
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="our-prepare">
+      <img
+        class="cover"
+        src="https://cdn.dribbble.com/users/505482/screenshots/3880791/api-spot.png"
+        alt=""
+        style="left: 77%"
+      />
+      <h2>С чего начали</h2>
+      <ol>
+        <li>Api layer (testing, refresh tokens);</li>
+        <li>Normalization (JSON API heavy response);</li>
+        <li>Serialization (json, dates fields);</li>
+        <li>Cache manager;</li>
+        <li>Clean strategy.</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="StorageResource">
+      <h2 style="margin-top: -40px">Реализация</h2>
+      <div class="code">
+        <script type="text/plain" class="language-ts">
+          class StorageResource<Entity extends { id: ItemId }> {
+              constructor({ type, serializer }): StorageResource;
+
+              getItems(ids: Array<string>): {[type: string]: Array<Entity>} | null;
+              multiRemove(ids: Array<ItemId>): Promise<void>;
+              setItems(items: Array<Entity>): Promise<void>;
+
+              cleanAll(): Promise<void>;
+              cleanUp(options: { days: number }): Promise<void>;
+
+              parseItem(rawItem: string): Entity;
+              serializeItem(item: Entity): string;
+              trackLastRead(ids: Array<ItemId>): Promise<void>;
+            }
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="usage-StorageResource">
+      <div class="code">
+        <script type="text/plain" class="language-ts">
+          const usersStorage = StorageResource({ type: 'users', serializer });
+
+          usersStorage.setItems([{ id: 1, name: 'Davyd' }]);
+
+          /*
+          AsyncStorage: {
+              'CV::users::1': '{"id":1,"name":"Davyd"}',
+              'LR::users::1': '1573942810000',
+          }
+          */
+
+          usersStorage.getItems([1]);
+          // AsyncStorage: {'LR::users::1': '1573942820000',}
+
+          usersStorage.getItems([1]);
+          // AsyncStorage: {'LR::users::1': '1573942830000',}
+        </script>
+      </div>
+    </section>
+
+    <section
+      class="slide"
+      id="need-SubStorageResource"
+      style="background: #000047"
+    >
+      <img
+        src="https://cdn.dribbble.com/users/2670779/screenshots/6155604/openfda.png"
+        class="cover"
+        alt=""
+      />
+      <h2 style="color: #fff; text-shadow: 1px 1px 3px #000">
+        В реальности общение с API не обходиться только id
+      </h2>
+      <code>GET /current/user</code>
+      <br />
+      <code>GET /data?include=magic</code>
+    </section>
+
+    <section class="slide" id="SubStorageResource-code">
+      <div class="code">
+        <script type="text/plain" class="language-ts">
+          class StorageResourceWithHelpers<
+            Entity extends { id: ItemId }
+          > extends StorageResource<Entity> {
+            setCustomIds(key: string, ids: Array<ItemId>): Promise<void>;
+            getCustomIds(key: string): Promise<Array<ItemId> | null>;
+            removeCustomKeys(keys: Array<string>): Promise<void>;
+          }
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="flow-fething-with-custom-key">
+      <div class="code" style="margin-top: -90px">
+        <script type="text/plain" class="language-ts">
+          class BlocksResource extends StorageResourceWithHelpers(){
+              async getStoredMainScreenBlocks(){
+                  const ids = this.getCustomIds('main-screen-blocks');
+
+                  return ids ? this.getItems(ids) : null;
+              }
+          }
+
+          const resource = BlocksResource({ type: 'blocks', serializer });
+          //...
+          const [ids,items] = await apiMethod(...);
+
+          resource.setCustomIds('main-screen-blocks', ids);
+          resource.setItems(items);
+          resource.getStoredMainScreenBlocks(); // {blocks: [...]}
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="helper-hook">
+      <div class="code" style="margin-top: -90px">
+        <script type="text/plain" class="language-ts">
+          const handlerOfflineRejects = async (...args: Args) => {
+              try {
+                  await apiMethod(...args).then((ids) => onGetIds(ids));
+                  // ...
+              } catch (error) {
+                  if (isNetworkError(error)) {
+                      const resourcesIndex = await storageMethod();
+
+                      if (resourcesIndex) {
+                          dispatch(indexResources(resourcesIndex));
+                          // ...
+                      }
+                  }
+
+                  throw error;
+              }
+          };
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" id="using-fallback">
+      <h2>Using offline fallback</h2>
+      <div class="code">
+        <script type="text/plain" class="language-ts">
+          export const findCurrentCompany = createOfflineFallbackSaga({
+            apiMethod: () => api.getCurrentCompany(),
+            storageMethod: () => storage.getStoredCurrentCompany(),
+            onGetIds: (ids: Array<CompanyId>) => storage.setCurrentCompanyIds(ids),
+          });
+        </script>
+      </div>
+    </section>
+
+    <section class="slide" style="background: #b8bcc1">
+      <h2 class="text-center">Handle errors</h2>
+      <video
+        class="cover"
+        playsinline=""
+        muted=""
+        autoplay=""
+        loop=""
+        style="background-image:url('https://cdn.dribbble.com/users/44860/screenshots/6631264/ovalrandom-02.png')"
+        data-silent="true"
+        src="https://cdn.dribbble.com/users/44860/videos/29874/ovalrandom-02.mp4"
+      ></video>
+    </section>
+
+    <section class="slide flex  justify-center items-center" id="demo-time">
+      <h2>Demo time...</h2>
+    </section>
+
+    <section
+      class="slide flex flex-col-reverse justify-center items-center"
+      id="that-is-it"
+    >
+      <h2 class="next">Доверяйте вашему устройтву, не соединению</h2>
+      <h2>
+        Будьте пессимистичны \ оптимистичны и прагматичны в ваших интерфейсах
+      </h2>
+      <style>
+        #that-is-it .next.active + h2 {
+          display: none;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="q\a">
+      <h2>Вопросы ?</h2>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <script src="prism.js"></script>
+    <script src="a.js"></script>
+  </body>
+</html>
